@@ -2,7 +2,7 @@ package com.max.idea;
 
 public class Main {
     public static void main (String[] args) {
-        float num = -12.7F; //Объявил переменную float
+        double num = 12.7; //Объявил переменную double
         byte cic = 12; //Объявил переменную byte
 
         //System.out.println("Hello World");
