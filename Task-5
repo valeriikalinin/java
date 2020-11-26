@@ -1,0 +1,34 @@
+package com.max.idea;
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws java.io.IOException {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Введите первое число (для ввода не целых чисел используйте символ запятую) ");
+        double x = scan.nextDouble();
+
+        System.out.println("введите операцию: +, -, * или / ");
+        char c0 = (char) System.in.read ();
+
+        System.out.println("Введите второе число (для ввода не целых чисел используйте символ запятую) ");
+        double y = scan.nextDouble();
+
+        if (c0 == '+') {
+            System.out.println("= " + (x + y));
+        }
+        else if (c0 == '-') {
+            System.out.println("= " + (x - y));
+        }
+        else if (c0 == '*') {
+            System.out.println("= " + (x * y));
+        }
+        else if (c0 == '/'){
+            System.out.println("= " + (x / y));
+        }
+
+
+    }
+}
