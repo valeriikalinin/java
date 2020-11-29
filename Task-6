@@ -1,0 +1,81 @@
+package com.max.idea;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("***СТАРТ ПРОГРАММЫ***");
+        convertValue();
+        System.out.println("***КОНЕЦ ПРОГРАММЫ***");
+    }
+
+    public static void convertValue() {
+        Scanner scan = new Scanner(System.in);
+        int choice;
+        int numberWeightOrDistance;
+
+        System.out.println("Выберите, что Вы хотите конвертировать: 1-масса или 2-расстояние ");
+        choice = scan.nextInt();
+
+        if (choice == 1) {
+            System.out.println("Выберите единицу измерения: 1 - Грамм; 2 - Киллограмм; 3 - Карат; ");
+            numberWeightOrDistance = scan.nextInt();
+            showMass(scan, numberWeightOrDistance);
+        } else if (choice == 2) {
+            System.out.println("Выберите единицу измерения: 1 - Метр; 2 - Миля; 3 - Ярд; 4 - Фут; ");
+            numberWeightOrDistance = scan.nextInt();
+            showDistance(scan, numberWeightOrDistance);
+        }
+    }
+
+    static void showMass(Scanner scan, int numberWeight){
+        double number = getNumber(scan);
+        if (numberWeight==1) {
+            System.out.println("Грамм: " + (number));
+            System.out.println("Киллограмм: " + (number / 1000));
+            System.out.println("Карат: " + (number * 5));
+        }
+        else if (numberWeight == 2) {
+            System.out.println("Киллограмм: " + (number));
+            System.out.println("Грамм: " + (number * 1000));
+            System.out.println("Карат: " + (number * 5000));
+        }
+        else if (numberWeight == 3) {
+            System.out.println("Карат: " + (number));
+            System.out.println("Грамм: " + (number / 5));
+            System.out.println("Киллограмм: " + (number / 5000));
+        }
+    }
+
+    static void showDistance(Scanner scan, double numberDistance){
+        double number = getNumber(scan);
+        if (numberDistance==1) {
+            System.out.println("Метр: " + (number));
+            System.out.println("Миля: " + (number / 1609));
+            System.out.println("Ярд: " + (number * 1.0936));
+            System.out.println("Фут: " + (number * 3.2808));
+        }
+        else if (numberDistance == 2) {
+            System.out.println("Миля: " + (number));
+            System.out.println("Метр: " + (number * 1609));
+            System.out.println("Ярд: " + (number * 1760));
+            System.out.println("Фут: " + (number * 5280));
+        }
+        else if (numberDistance == 3) {
+            System.out.println("Ярд: " + (number));
+            System.out.println("Метр: " + (number * 0.9144));
+            System.out.println("Миля: " + (number * 0.000568));
+            System.out.println("Фут: " + (number * 3));
+        }
+        else if (numberDistance == 4) {
+            System.out.println("Фут: " + (number));
+            System.out.println("Метр: " + (number / 3.2808));
+            System.out.println("Миля: " + (number * 0.000189));
+            System.out.println("Ярд: " + (number * 0.333333));
+        }
+    }
+
+    static double getNumber(Scanner scan){
+        System.out.println("Введите число");
+        return scan.nextInt();
+    }
+}
