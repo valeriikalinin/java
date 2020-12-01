@@ -4,19 +4,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         System.out.println("Введите первое целочисленное число");
         int number1 = scan.nextInt();
+
         System.out.println("Введите второе целочисленное число");
         int number2 = scan.nextInt();
+
         System.out.println("Введите третье целочисленное число");
         int number3 = scan.nextInt();
 
-        int sum = (number1+number2+number3) /(3);
-        int sum1 = (sum/2);
+        double sum = number1 + number2 + number3 / 3;
+        double sum1 = sum / 2;
 
-        String sum2 = (sum1 > 3) ? "Программа выполнена корректно" : "Программа выполнена НЕ корректно";
+        String sum2 = sum1 > 3 ? "Программа выполнена корректно" : "Программа выполнена НЕ корректно";
         System.out.println("Среднее арифметическое введённых чисел " + sum);
         System.out.println(sum2);
-        
+
     }
 }
