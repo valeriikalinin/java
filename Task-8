@@ -1,0 +1,18 @@
+package com.max.idea;
+import java.util.Scanner;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Введите любое целое положительное число: ");
+
+        int enterNumberOne = sc.nextInt();
+        int numberTwo = 0;
+        for (int i=1; i <= enterNumberOne; i+=2){
+            numberTwo = numberTwo + i;
+        }
+        System.out.println (numberTwo);
+    }
+}
