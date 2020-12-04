@@ -16,7 +16,7 @@ public class Main {
             numberOneChoiceUsers[i] = in.nextDouble(); // Записали в массив значения, которые ввел пользователь
             numberTwoCopiChoiceUsers += numberOneChoiceUsers[i]; // Присвоили переменной значения массива
         }
-        numberTwoCopiChoiceUsers /= numberOneChoiceUsers.length; // Посчитали среднее арифметическое всех введенных чисел. Разделили введенные числа и присвоили переменной
+        numberTwoCopiChoiceUsers /= numberOneChoiceUsers.length; // Посчитали среднее арифметическое всех введенных чисел. Разделили левый операнд на правый
         System.out.println("среднее арифметическое всех введенных чисел = " + numberTwoCopiChoiceUsers);
         for (int i = 0; i < numberOneChoiceUsers.length; i++){
             System.out.println("Среднее арифметическое = " + numberOneChoiceUsers[i] * numberTwoCopiChoiceUsers);
