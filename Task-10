@@ -1,0 +1,29 @@
+package com.max.idea;
+import java.util.Scanner;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int choiceUsersLines;
+        int choiceUsersColumns;
+
+        System.out.print("Укажите количество строк, которые будут содержаться в Вашей матрице = ");
+        choiceUsersLines = in.nextInt();
+
+        System.out.print("Укажите количество столбцов, которые будут содержаться в Вашей матрице = ");
+        choiceUsersColumns = in.nextInt();
+
+        double [][] ourNumbersLineAndColumns = new double[choiceUsersLines][choiceUsersColumns]; // Записали в матрицу введенные пользовательем числа
+
+        for (int i = 0; i < choiceUsersLines; i++){
+            for (int b = 0; b < choiceUsersColumns; b++){
+                System.out.printf("Значение будет записано в индекс массива: [%d][%d]. Введите значение элемента:", i, b );
+                ourNumbersLineAndColumns[i][b] = in.nextDouble();
+            }
+        }
+        for (int i = 0; i < choiceUsersLines; i++){
+            System.out.printf("Элемент [%d][0] * 3 = %.2f\n", i,  + ourNumbersLineAndColumns[i][0]*3);
+        }
+    }
+}
