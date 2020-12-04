@@ -1,0 +1,25 @@
+package com.max.idea;
+import java.util.Scanner;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double[] numberOneChoiceUsers; // Инициализировали массив для ввода в него значений
+        double numberTwoCopiChoiceUsers = 0; // Переменная куда присвоим значеие массива
+
+        System.out.println("Укажите, сколько будете вводить значений в массив? ");
+        numberOneChoiceUsers = new double[in.nextInt()]; // Присвоили размер массиву
+        
+        for (int i = 0; i < numberOneChoiceUsers.length; i++){
+            System.out.print("Введи значение в индекс массива № [" + i + "] = ");
+            numberOneChoiceUsers[i] = in.nextDouble(); // Записали в массив значения, которые ввел пользователь
+            numberTwoCopiChoiceUsers += numberOneChoiceUsers[i]; // Присвоили переменной значения массива
+        }
+        numberTwoCopiChoiceUsers /= numberOneChoiceUsers.length; // Посчитали среднее арифметическое всех введенных чисел. Разделили введенные числа и присвоили переменной
+        System.out.println("среднее арифметическое всех введенных чисел = " + numberTwoCopiChoiceUsers);
+        for (int i = 0; i < numberOneChoiceUsers.length; i++){
+            System.out.println("Среднее арифметическое = " + numberOneChoiceUsers[i] * numberTwoCopiChoiceUsers);
+        }
+    }
+}
