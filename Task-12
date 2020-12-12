@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        boolean allCorrect[] = new boolean[]{false,false,false}; // Создали массив с 3-я ложными значениями (константами)
+        String strNumberOne = "I like Java!!!";
+
+        allCorrect[0] = strNumberOne.contains("Java"); //записываем булево значение 1
+        //System.out.println("Содержит подстроку \"Java\": " + allCorrect[0]); //При желании можно вывести булево значение, чтобы например понять, почему не выполнится программа и где же у нас знаение разнится
+        allCorrect[1] = strNumberOne.startsWith("I like"); //записываем булево значение 2
+        //System.out.println("Начинается с подстроки \"I like\": " + allCorrect[1]); //При желании можно вывести булево значение, чтобы например понять, почему не выполнится программа и где же у нас знаение разнится
+        allCorrect[2] = strNumberOne.endsWith("!!!"); //записываем булево значение 3
+        //System.out.println("Заканчивается подстрокой \"!!!\": " + allCorrect[2]); //При желании можно вывести булево значение, чтобы например понять, почему не выполнится программа и где же у нас знаение разнится
+
+        if (allCorrect[0] && allCorrect[1] && allCorrect[2]){
+            System.out.println(strNumberOne.toUpperCase());
+        }
+        strNumberOne = strNumberOne.replaceAll("a", "o");
+        System.out.println(strNumberOne.substring(7,11));
+    }
+}
