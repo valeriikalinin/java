@@ -1,0 +1,22 @@
+package com.max.idea;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String numberOne; //Для записи введенного числа в строковую переменную
+        int numberTwo; //Для записи введенного целочисленного в целочисленную переменную типа int
+
+        System.out.println("Укажите первое число: ");
+        numberOne = scan.nextLine();
+        System.out.println("Укажите второе число: ");
+        numberTwo = scan.nextInt();
+
+        if (Integer.parseInt (numberOne) > (numberTwo)) {
+            System.out.println("Число " + numberOne + " больше числа " + Double.parseDouble(String.valueOf(numberTwo)));
+        }
+        else if (Integer.parseInt (numberOne) == (numberTwo)){
+            System.out.println("Оба числа одинаковые");
+        }
+        else System.out.println("Число " + numberTwo + " больше числа " + Double.parseDouble(String.valueOf(numberOne)));
+    }
+}
