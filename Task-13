@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String [] stringNumberOne;
+        String strNumberOneUser;
+        int numberTwo = 0;
+
+        System.out.println("Введите вашу строку и нажмите enter: ");
+        strNumberOneUser = scan.nextLine();
+        
+        stringNumberOne = strNumberOneUser.split("\\s"); //Выводим слова, состоящие только из латиницы
+        for (int i = 0; i < stringNumberOne.length; i++){
+            if (stringNumberOne[i].matches("^[a-zA-Z0-9]+$")){
+                System.out.print(stringNumberOne[i] + ", ");
+                numberTwo ++;
+            }
+        }
+        System.out.printf("\nКоличество слов, состоящих только из латинских символов: %d" , numberTwo); //Выводим количество этих слов
+    }
+}
