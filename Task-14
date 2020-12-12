@@ -1,0 +1,26 @@
+public class Main {
+    public static void main(String[] args) {
+        int minNumber = 20;
+        int maxNumber = -20;
+        int[] check = new int[15];
+        int maxNumberOne;
+        
+        for (int i = 0; i < check.length; i++) {
+            check[i] = (int) (Math.random() * 42 - 21);
+            if (minNumber > check[i]) minNumber = check[i];
+            if (maxNumber < check[i]) maxNumber = check[i];
+        }
+
+        System.out.printf("max: %d\nmin: %d\n", maxNumber, minNumber); //Выводим максимальный и минимальный элемент массива
+
+        if (minNumber < 0) {
+            if (minNumber * (-1) > maxNumber) {
+                maxNumberOne = minNumber;
+            } else maxNumberOne = maxNumber;
+        } 
+        else if (minNumber > maxNumber) {
+            maxNumberOne = minNumber;
+        } else maxNumberOne = maxNumber;
+        System.out.printf("Большее по модулю: %d", maxNumberOne); //Выводим наибольшее по модулю
+    }
+}
