@@ -1,0 +1,36 @@
+package com.max.idea;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int maxSpells = 0;
+        int numOfLongerWord = 0;
+        Scanner scan = new Scanner(System.in);
+        String [] strings;
+
+        System.out.print("Введите количестов строк: ");
+        strings = new String[scan.nextInt()];
+
+        System.out.println("Вводите каждую строку, разделяя их переносом строки (enter): ");
+        for (int i = 0; i < strings.length; i++){
+            strings[i] = scan.next();
+            if (countCharacters(strings[i]) > maxSpells){
+                numOfLongerWord = i;
+                maxSpells = countCharacters(strings[i]);
+            }
+        }
+        System.out.println("Строка с наибольшим числом уникальных символов: " + strings[numOfLongerWord]);
+    }
+
+    public static int countCharacters(String s) {
+        String lowerCase = s.toLowerCase();
+        char characters[] = lowerCase.toCharArray();
+        int countChars = s.length();
+        for (int i = 0; i < characters.length; i++) {
+            if (i != lowerCase.indexOf(characters[i])) {
+                countChars--;
+            }
+        }
+        return countChars;
+    }
+}
