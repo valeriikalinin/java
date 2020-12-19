@@ -1,0 +1,15 @@
+package com.max.idea;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double currencyDollar;
+        double rubles;
+        System.out.print("Введите текущий курс доллара к рублю: ");
+        currencyDollar = in.nextDouble();
+        System.out.print("Введите количество рублей: ");
+        rubles = in.nextDouble();
+        System.out.printf("%.2f руб. в долларах = %.2f$ при курсе %.2f", rubles, rubles/currencyDollar, currencyDollar);
+    }
+}
